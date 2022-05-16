@@ -1,0 +1,275 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* binhex_material_move
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20190614\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-22 08:55+0000\n"
+"PO-Revision-Date: 2021-06-03 14:40+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: binhex_material_move
+#: code:addons/binhex_material_move/models/models.py:55
+#, python-format
+msgid " to "
+msgstr " a "
+
+#. module: binhex_material_move
+#: code:addons/binhex_material_move/models/models.py:25
+#, python-format
+msgid "%s: current (%s)/ asked (%s)<br/>"
+msgstr "%s: actual (%s)/ pedida (%s)<br/>"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:175
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:224
+#, python-format
+msgid "<p></p>"
+msgstr ""
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:227
+#, python-format
+msgid "<p>All seems correct.</p>"
+msgstr "<p>Todo parece correcto.</p>"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:156
+#, python-format
+msgid "<p>Destination must be set.</p>"
+msgstr "<p>Debe establecer el destino</p>"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:178
+#, python-format
+msgid "<p>Error creating the picking.</p>"
+msgstr "<p>Error al crear el albarán/picking</p>"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:144
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:205
+#, python-format
+msgid "<p>Number of products must be higher than 0.</p>"
+msgstr "<p>El numero de productos de ser mayor que 0</p>"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:162
+#, python-format
+msgid "<p>Origin and Destination must be different.</p>"
+msgstr "<p>El origen y el destino deben ser diferentes.</p>"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:150
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:211
+#, python-format
+msgid "<p>Origin must be set.</p>"
+msgstr "<p>Origen debe estar establecido</p>"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:93
+#, python-format
+msgid "Add Product..."
+msgstr "Añadir producto..."
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:105
+#, python-format
+msgid "Check Av"
+msgstr "Comprobar"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:127
+#, python-format
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:15
+#, python-format
+msgid "Company Logo"
+msgstr "Logo compañia"
+
+#. module: binhex_material_move
+#: code:addons/binhex_material_move/models/models.py:97
+#: model:ir.actions.act_window,name:binhex_material_move.binhex_location_open_quants
+#: model_terms:ir.ui.view,arch_db:binhex_material_move.project_project_form_stock
+#, python-format
+msgid "Current Stock"
+msgstr "Stock actual"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:75
+#, python-format
+msgid "Destination place:"
+msgstr "Lugar de destino:"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:100
+#, python-format
+msgid "Exit"
+msgstr "Salir"
+
+#. module: binhex_material_move
+#: model:ir.actions.client,name:binhex_material_move.binhex_end_screen
+msgid "Final Screen"
+msgstr "Albarán finalizado"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:110
+#, python-format
+msgid "Finish"
+msgstr "Final"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:28
+#, python-format
+msgid "Manual Move"
+msgstr "Movimiento manual"
+
+#. module: binhex_material_move
+#: model:ir.actions.client,name:binhex_material_move.binhex_material_borrow
+#: model:ir.ui.menu,name:binhex_material_move.menu_material_borrow
+msgid "Material Borrow"
+msgstr "Material entregado"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:13
+#, python-format
+msgid "Material manager"
+msgstr "Envio de materiales"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:124
+#, python-format
+msgid "Modal body text goes here."
+msgstr ""
+
+#. module: binhex_material_move
+#: code:addons/binhex_material_move/models/models.py:24
+#, python-format
+msgid "Not enough stock for:<br/>"
+msgstr "No hay suficiente stock para:<br/>"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:172
+#, python-format
+msgid "OK"
+msgstr ""
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:169
+#, python-format
+msgid "Picking Correctly Created!"
+msgstr "¡Picking/albarán correctamente creado!"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:71
+#, python-format
+msgid "Place of origin:"
+msgstr "Lugar de origen:"
+
+#. module: binhex_material_move
+#: model_terms:ir.ui.view,arch_db:binhex_material_move.binhex_product_kanban_view
+msgid "Product"
+msgstr "Producto"
+
+#. module: binhex_material_move
+#: model:ir.actions.act_window,name:binhex_material_move.binhex_product_kanban_action
+msgid "Product Kanban"
+msgstr "Producto Kanban"
+
+#. module: binhex_material_move
+#: model:ir.model,name:binhex_material_move.model_project_project
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:173
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:222
+#, python-format
+msgid "Result"
+msgstr "Resultado"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:20
+#, python-format
+msgid "Scan Material"
+msgstr "Escanear material"
+
+#. module: binhex_material_move
+#: model:ir.actions.client,name:binhex_material_move.binhex_op_type_select
+msgid "Select Operation"
+msgstr "Seleccionar Operación"
+
+#. module: binhex_material_move
+#: code:addons/binhex_material_move/models/models.py:115
+#: model_terms:ir.ui.view,arch_db:binhex_material_move.project_project_form_stock
+#, python-format
+msgid "Stock Moves"
+msgstr "Movimientos de stock"
+
+#. module: binhex_material_move
+#: model:ir.model,name:binhex_material_move.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: binhex_material_move
+#: model:ir.actions.act_window,name:binhex_material_move.binhex_warehouse_kanban_action
+msgid "Warehouse Kanban"
+msgstr "Almacén Kanban"
+
+#. module: binhex_material_move
+#: model_terms:ir.ui.view,arch_db:binhex_material_move.binhex_warehouse_view_kanban
+msgid "Warehouse Name"
+msgstr "Nombre del almacén"
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:143
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:149
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:155
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:161
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:204
+#: code:addons/binhex_material_move/static/src/js/mat_borrow.js:210
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:118
+#, python-format
+msgid "Warning"
+msgstr ""
+
+#. module: binhex_material_move
+#. openerp-web
+#: code:addons/binhex_material_move/static/src/xml/templates.xml:23
+#, python-format
+msgid "or select"
+msgstr "o seleccione"

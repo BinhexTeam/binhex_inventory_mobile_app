@@ -1,0 +1,619 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* binhex_inventory_log
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20201216\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-10 13:38+0000\n"
+"PO-Revision-Date: 2021-11-10 13:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#: code:addons/binhex_inventory_log/static/src/js/validate_wh_ops.js:0
+#, python-format
+msgid "<button id='clear' class='btn btn-primary'>Clear</button><br/>"
+msgstr "<button id='clear' class='btn btn-primary'>Limpiar</button><br/>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid "<button id='finish' class='btn btn-success'>Confirm</button><br/>"
+msgstr "<button id='finish' class='btn btn-success'>Confirmar</button><br/>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#: code:addons/binhex_inventory_log/static/src/js/validate_wh_ops.js:0
+#, python-format
+msgid ""
+"<canvas id='myCanvas' class='o_signature_canvas'> Canvas not supported</"
+"canvas>"
+msgstr ""
+"<canvas id='myCanvas' class='o_signature_canvas'> Canvas no soportado</"
+"canvas>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid ""
+"<div class='row mb-2'><button class='btn btn-info c_loc_ware offset-2 "
+"col-8'>Create Location/Warehouse</button></div>"
+msgstr ""
+"<div class='row mb-2'><button class='btn btn-info c_loc_ware offset-2 "
+"col-8'>Crear Localización/Almacén</button></div>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid ""
+"<div class='row mb-2'><button class='btn btn-info c_product offset-2 "
+"col-8'>Create Product</button></div>"
+msgstr ""
+"<div class='row mb-2'><button class='btn btn-info c_product offset-2 "
+"col-8'>Crear Producto</button></div>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid ""
+"<div class='row mb-2'><button class='btn btn-info c_supplier offset-2 "
+"col-8'>Create Supplier</button></div>"
+msgstr ""
+"<div class='row mb-2'><button class='btn btn-info c_supplier offset-2 "
+"col-8'>Crear Proveedor</button></div>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid "<p></p>"
+msgstr ""
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid "<p>Destination must be set.</p>"
+msgstr "<p>El destino debe ser establecido.</p>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid "<p>Error creating the picking.</p>"
+msgstr "<p>Error creando la selección.</p>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid "<p>Number of products must be higher than 0.</p>"
+msgstr "<p>El número de productos debe ser mayor a 0.</p>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid "<p>Supplier must be set.</p>"
+msgstr "<p>El proveedor debe estar establecido.</p>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/validate_wh_ops.js:0
+#, python-format
+msgid ""
+"<p>You have processed less than what was initially planned.</p><br/><div "
+"class='form-check'><input class='form-check-input' type='checkbox' "
+"onclick=document.getElementById('b_order').setAttribute('value',document."
+"getElementById('b_order').value*-1) value='-1' id='b_order'/><label "
+"class='form-check-label' for='flexCheckDefault'>Create BackOrder</label></"
+"div>"
+msgstr ""
+"<p>Has procesado menos cantidad de la planeada inicialmente.</p><br/><div "
+"class='form-check'><input class='form-check-input' type='checkbox' "
+"onclick=document.getElementById('b_order').setAttribute('value',document."
+"getElementById('b_order').value*-1) value='-1' id='b_order'/><label "
+"class='form-check-label' for='flexCheckDefault'>Crear entrega parcial</"
+"label></div>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/validate_wh_ops.js:0
+#, python-format
+msgid ""
+"<p>You have processed more than what was initially planned. Are you sure "
+"you want to validate the picking?</p>"
+msgstr ""
+"<p>Has procesado más cantidad de la planeada inicialmente. ¿Quieres validar "
+"el albarán igualmente?</p>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/validate_wh_ops.js:0
+#, python-format
+msgid ""
+"<p>You have processed more than what was initially planned. Are you sure "
+"you want to validate the picking?</p><br/>"
+msgstr ""
+"<p>Has procesado más cantidad de la planeada inicialmente. ¿Quieres validar "
+"el albarán igualmente?</p><br/>"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Add Product..."
+msgstr "Añadir producto..."
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Back"
+msgstr "Atrás"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid "Barcode '' not found"
+msgstr "Código de barras '' no encontrado"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/validate_wh_ops.js:0
+#, python-format
+msgid "Barcode don't match any product in line"
+msgstr "El código de barras no coincide con ningún producto en línea"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/inv_upd.js:0
+#: code:addons/binhex_inventory_log/static/src/js/quick_info.js:0
+#, python-format
+msgid "Barcode not found"
+msgstr "Código de barras no encontrado"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/main_screen.js:0
+#, python-format
+msgid "Borrow"
+msgstr ""
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Company Logo"
+msgstr "Logo de la compañía"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Create Internal transfer"
+msgstr "Consumo / Transferencia Interna"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Create Purchase Order"
+msgstr "Crear orden de compra"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Current location"
+msgstr "Localización actual"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/models/models.py:0
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Delivery Orders"
+msgstr "Órdenes de entrega"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Destination Location"
+msgstr "Localización del destino"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Destination place:"
+msgstr "Lugar de destino:"
+
+#. module: binhex_inventory_log
+#: model:ir.model.fields,field_description:binhex_inventory_log.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:binhex_inventory_log.field_stock_warehouse__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Done"
+msgstr "Hecho"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Empty"
+msgstr "Vacío"
+
+#. module: binhex_inventory_log
+#: model:ir.actions.client,name:binhex_inventory_log.binhex_end_screen_p
+msgid "End"
+msgstr "Fin"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Exit"
+msgstr "Salir"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Finish"
+msgstr "Terminar"
+
+#. module: binhex_inventory_log
+#: model:ir.model.fields,field_description:binhex_inventory_log.field_purchase_order__id
+#: model:ir.model.fields,field_description:binhex_inventory_log.field_stock_warehouse__id
+msgid "ID"
+msgstr ""
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/main_screen.js:0
+#, python-format
+msgid "Internal Transfer"
+msgstr "Transferencia interna"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/models/models.py:0
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Internal Transfers"
+msgstr "Transferencia interna"
+
+#. module: binhex_inventory_log
+#: code:addons/binhex_inventory_log/models/models.py:0
+#, python-format
+msgid "InvApp "
+msgstr ""
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/main_screen.js:0
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Inventory"
+msgstr "Inventario"
+
+#. module: binhex_inventory_log
+#: model:ir.ui.menu,name:binhex_inventory_log.menu_inventory_logistic
+msgid "Inventory Logistic"
+msgstr "Logística de inventario"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#: model:ir.actions.client,name:binhex_inventory_log.binhex_inv_upd
+#, python-format
+msgid "Inventory Update"
+msgstr "Ajuste de inventario"
+
+#. module: binhex_inventory_log
+#: model:ir.model.fields,field_description:binhex_inventory_log.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:binhex_inventory_log.field_stock_warehouse____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Location"
+msgstr "Localización"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/inv_upd.js:0
+#, python-format
+msgid "Location not set"
+msgstr "Localización no establecida"
+
+#. module: binhex_inventory_log
+#: model:ir.actions.client,name:binhex_inventory_log.binhex_main_screen
+msgid "Main Screen"
+msgstr "Pantalla principal"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Modal body text goes here."
+msgstr ""
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/main_screen.js:0
+#, python-format
+msgid "Need to install 'binhex_tools_management' for this option"
+msgstr "Necesitas instalar 'binhex_tools_management' para esta opción"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/inv_upd.js:0
+#, python-format
+msgid "Number of products must be higher than 0"
+msgstr "El número de productos debe ser mayor a 0"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "OK"
+msgstr ""
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "On Hand"
+msgstr "A mano"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Operation Type"
+msgstr "Tipo de operación"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Partner"
+msgstr "Socio"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Planned date"
+msgstr "Fecha de recepción"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Price"
+msgstr "Precio"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Product"
+msgstr "Producto"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Purchase"
+msgstr "Compra"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Purchase Correctly Created!"
+msgstr "Compra creada correctamente!"
+
+#. module: binhex_inventory_log
+#: model:ir.model,name:binhex_inventory_log.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/main_screen.js:0
+#: model:ir.actions.client,name:binhex_inventory_log.binhex_purchases
+#, python-format
+msgid "Purchases"
+msgstr "Compras"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Qty"
+msgstr "Cant"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/main_screen.js:0
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#: model:ir.actions.client,name:binhex_inventory_log.binhex_quick_info
+#, python-format
+msgid "Quick Info"
+msgstr "Información rápida"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/models/models.py:0
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Receipts"
+msgstr "Ingresos"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Reserved"
+msgstr "Reservado"
+
+#. module: binhex_inventory_log
+#: code:addons/binhex_inventory_log/models/models.py:0
+#: model:ir.model.fields,field_description:binhex_inventory_log.field_purchase_order__res_signature
+#, python-format
+msgid "Respon Signature"
+msgstr ""
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/models/models.py:0
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#: model:ir.model.fields,field_description:binhex_inventory_log.field_purchase_order__responsable
+#, python-format
+msgid "Responsable"
+msgstr "Responsable"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#, python-format
+msgid "Result"
+msgstr "Resultado"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Scan Product or Location"
+msgstr "Escanea un producto o localización"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Scheduled Date"
+msgstr "Fecha prevista"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#: code:addons/binhex_inventory_log/static/src/js/validate_wh_ops.js:0
+#, python-format
+msgid "Signature"
+msgstr "Firma"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Source Location"
+msgstr "Ubicación de origen"
+
+#. module: binhex_inventory_log
+#: model:ir.actions.act_window,name:binhex_inventory_log.binhex_supplier_kanban_action
+msgid "Supplier Kanban"
+msgstr "Kanban Proveedores"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Supplier.Ref"
+msgstr "Ref. Proveedor"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Supplier:"
+msgstr "Proveedor:"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Tools Management"
+msgstr "Gestión de herramientas"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Validate Picking"
+msgstr "Validar albarán"
+
+#. module: binhex_inventory_log
+#: model:ir.actions.client,name:binhex_inventory_log.binhex_validate_wh_ops
+msgid "Validate Wh Ops"
+msgstr "Validar Alm Ops"
+
+#. module: binhex_inventory_log
+#: model:ir.model,name:binhex_inventory_log.model_stock_warehouse
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/main_screen.js:0
+#: code:addons/binhex_inventory_log/static/src/js/validate_wh_ops.js:0
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Warehouse Operations"
+msgstr "Operaciones de almacén"
+
+#. module: binhex_inventory_log
+#. openerp-web
+#: code:addons/binhex_inventory_log/static/src/js/purchases.js:0
+#: code:addons/binhex_inventory_log/static/src/js/validate_wh_ops.js:0
+#: code:addons/binhex_inventory_log/static/src/xml/templates.xml:0
+#, python-format
+msgid "Warning"
+msgstr "Advertencia"
+
+#. module: binhex_inventory_log
+#: model_terms:ir.ui.view,arch_db:binhex_inventory_log.binhex_suppliers_view_kanban
+msgid "at"
+msgstr "en"

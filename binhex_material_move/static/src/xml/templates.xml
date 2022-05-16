@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+    <t t-name="MatBorrow">
+        <style>
+            .o_main{
+                padding-left: 0px !important;
+            }
+        </style>
+       <div class="o_home_menu_background">
+            <div class="o_material_borrow_container">
+                <div class="o_borrow">
+                    <h1>
+                        <small>Material manager</small><br/>
+                    </h1>
+                    <img src="/web/image/res.company/1/logo" alt="Company Logo" class="o_hr_attendance_kiosk_company_image"/>
+
+                    <div class="row o_hr_attendance_kiosk_welcome_row">
+                        <div class="col-sm-5">
+                            <img class="img img-fluid d-block mx-auto" src="/hr_attendance/static/src/img/barcode.png"/>
+                            <h5 class="mt4 mb0">Scan Material</h5>
+                        </div>
+                        <div class="col-sm-2">
+                            <h3 class="mt0 text-muted"><i>or select</i></h3>
+                        </div>
+                        <div class="col-sm-5">
+                        
+                            <button class="btn btn-primary manual">
+                                <h3 class="m-2">Manual Move</h3>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group-vertical d-lg-none d-xl-none" role="group" style="width: 100%;height: 40%;">
+                    <div class="btn-group full-h">
+                        <div class="btn-secondary" disable="" type="text" style="align-content: center;display: grid;">
+                          <h3 id="code" style="text-align: center;vertical-align: middle;text-underline-position: ;"></h3>
+                        </div>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 1" >1</button>
+                        <button class="btn btn-secondary 2" >2</button>
+                        <button class="btn btn-secondary 3" >3</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 4" >4</button>
+                        <button class="btn btn-secondary 5" >5</button>
+                        <button class="btn btn-secondary 6" >6</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 7" >7</button>
+                        <button class="btn btn-secondary 8" >8</button>
+                        <button class="btn btn-secondary 9" >9</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary dot" >.</button>
+                        <button class="btn btn-secondary 0" >0</button>
+                        <button class="btn btn-secondary del" >&lt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="MatOrder">
+        <style>
+            .o_main{
+                padding-left: 0px !important;
+            }
+        </style>
+       <div class="o_home_menu_background">
+            <div class="o_material_borrow_container">
+                <div class="o_borrow" style="overflow: auto;">
+                    <div class="form-row" style="border-bottom: 1px black solid;">
+                        <div class="form-group col-md-6">
+                            <label for="origPlace">Place of origin:</label>
+                            <input class="form-control" t-attf-value="{{orig and orig.display_name}}" id="origPlace" readonly="1"/>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="destPlace">Destination place:</label>
+                            <input class="form-control" t-attf-value="{{dest and dest.display_name}}" id="destPlace" readonly="1"/>
+                        </div>
+                    </div>
+                    <table class="table table-sm" style="border-bottom: 1px black solid;">
+                      <tbody>
+                        <tr>
+                          <th scope="row">Responsable</th>
+                          <td class="col-6 partner" style="background-color: lightgray;"><t t-esc="respon and respon.name"/></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="product_list mt-4">
+                        <t t-foreach="Object.keys(products)" t-as="key">
+                            <div t-attf-class='row mb-1 prod_{{key}}'> 
+                                <input type='number' t-att-value='products[key][1]' class='col-2 qty form-control' min='1'/>
+                                <input type='text' t-att-value='products[key][0]' class='col-9 prod form-control' readonly="1"/>
+                                <button class='trash col-1 btn btn-danger'>
+                                    <i class='fa fa-trash'/>
+                                </button>
+                            </div>
+                        </t>
+                    </div>
+                    <div class="mt-2">
+                        <div class="Add row">
+                            <a id="add" href="#" class="col-12">Add Product...</a>
+                        </div>
+                    </div>    
+
+                    <div class="row buttons mt-4">
+                        <div class="col-4">
+                            <button class="btn btn-danger exit">
+                                <h3 class="m-2">Exit</h3>
+                            </button>
+                        </div>  
+                        <div class="col-4">
+                            <button class="btn btn-success check">
+                                <h3 class="m-2">Check Av</h3>
+                            </button>
+                        </div>
+                        <div class="col-4">
+                            <button class="btn btn-primary start">
+                                <h3 class="m-2">Finish</h3>
+                            </button>
+                        </div>       
+                    </div>     
+                    <div class="modal" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Warning</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">X</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>                      
+                </div>
+                <div class="btn-group-vertical d-lg-none d-xl-none" role="group" style="width: 100%;height: 40%;">
+                    <div class="btn-group full-h">
+                        <div class="btn-secondary" disable="" type="text" style="align-content: center;display: grid;">
+                          <h3 id="code" style="text-align: center;vertical-align: middle;text-underline-position: ;"></h3>
+                        </div>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 1" >1</button>
+                        <button class="btn btn-secondary 2" >2</button>
+                        <button class="btn btn-secondary 3" >3</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 4" >4</button>
+                        <button class="btn btn-secondary 5" >5</button>
+                        <button class="btn btn-secondary 6" >6</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 7" >7</button>
+                        <button class="btn btn-secondary 8" >8</button>
+                        <button class="btn btn-secondary 9" >9</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary dot" >.</button>
+                        <button class="btn btn-secondary 0" >0</button>
+                        <button class="btn btn-secondary del" >&lt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="EndScreen">
+        <style>
+            .o_main{
+                padding-left: 0px !important;
+            }
+        </style>
+        <div class="o_hr_attendance_kiosk_mode_container o_home_menu_background" style="flex-flow: row;">
+            <div class="o_material_borrow_container">
+                <div class="o_borrow">
+
+                    <h1 class="mb0">Picking Correctly Created!</h1>
+
+                    <button class="button_dismiss btn btn-primary btn-lg">
+                        <span class="text-capitalize">OK</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>
+

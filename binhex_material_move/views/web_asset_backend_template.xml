@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="binhex_material_move assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/binhex_material_move/static/src/js/mat_borrow.js"></script>
+            <script type="text/javascript" src="/binhex_material_move/static/src/js/kanban_view_handler.js"></script>
+            <script type="text/javascript" src="/binhex_material_move/static/src/js/canvas.js"></script>
+            <link rel="stylesheet" type="text/scss" href="/binhex_material_move/static/src/scss/binhex_material_move.scss"/>
+        </xpath>
+    </template>
+</odoo>

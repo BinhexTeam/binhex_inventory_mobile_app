@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+
+    <t t-name="MainScreenXML">
+        <style>
+            .o_main{
+                padding-left: 0px !important;
+            }
+        </style>
+       <div class="o_home_menu_background">
+            <div class="o_material_borrow_container">
+                <div class="o_borrow">
+                    <img src="/web/image/res.company/1/logo" alt="Company Logo" class="o_hr_attendance_kiosk_company_image"/>
+
+                    <div class="row o_hr_attendance_kiosk_welcome_row">
+                        <div class="col-sm-12 mb-3">
+                            <button class="btn btn-primary col-12 wh_op">
+                                <h3 class="m-2">Warehouse Operations</h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row o_hr_attendance_kiosk_welcome_row">
+                        <div class="col-sm-12 mb-3">
+                            <button class="btn btn-primary col-12 int_trans">
+                                <h3 class="m-2">Create Internal transfer</h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row o_hr_attendance_kiosk_welcome_row">
+                        <div class="col-sm-12 mb-3">
+                            <button class="btn btn-primary col-12 pur_ord">
+                                <h3 class="m-2">Create Purchase Order</h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row o_hr_attendance_kiosk_welcome_row">
+                        <div class="col-sm-12 mb-3">
+                            <button class="btn btn-primary col-12 inv_upd">
+                                <h3 class="m-2">Inventory Update</h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row o_hr_attendance_kiosk_welcome_row">
+                        <div class="col-sm-12 mb-3">
+                            <button class="btn btn-primary col-12 quick_info">
+                                <h3 class="m-2">Quick Info</h3>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="WhOpsXML">
+        <style>
+            .o_main{
+                padding-left: 0px !important;
+            }
+        </style>
+       <div class="o_home_menu_background">
+            <div class="o_material_borrow_container">
+                <div class="o_borrow">
+                    <h2 class="mb-4">Warehouse Operations</h2>
+                    <div class="row o_hr_attendance_kiosk_welcome_row">
+                        <div class="col-sm-12 mb-3">
+                            <button class="btn btn-primary col-12 receipts">
+                                <h3 class="m-2"><span>Receipts</span> <span class="badge badge-pill badge-light"><t t-esc="count.inc"/></span></h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row o_hr_attendance_kiosk_welcome_row">
+                        <div class="col-sm-12 mb-3">
+                            <button class="btn btn-primary col-12 int_trans">
+                                <h3 class="m-2"><span>Internal Transfers </span> <span class="badge badge-pill badge-light"><t t-esc="count.int"/></span></h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row o_hr_attendance_kiosk_welcome_row">
+                        <div class="col-sm-12 mb-3">
+                            <button class="btn btn-primary col-12 deliv_ord">
+                                <h3 class="m-2"><span>Delivery Orders</span> <span class="badge badge-pill badge-light"><t t-esc="count.out"/></span></h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row o_hr_attendance_kiosk_welcome_row">
+                        <div class="col-sm-12 mb-3">
+                            <button class="btn btn-danger col-3 back">
+                                <h3 class="m-2">Back</h3>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="ValidateWHOpsXML">
+        <style>
+            .o_main{
+                padding-left: 0px !important;
+            }
+        </style>
+       <div class="o_home_menu_background">
+            <div class="o_material_borrow_container">
+                <div class="o_borrow" style="overflow: auto;">
+                    <h2 class="mb-3"><t t-esc="picking.name"/></h2>
+                        <table class="table table-sm">
+                          <tbody>
+                            <tr>
+                              <th scope="row">Partner</th>
+                              <td><t t-esc="picking.partner_id[1]"/></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Source Location</th>
+                              <td><t t-esc="picking.location_id[1]"/></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Destination Location</th>
+                              <td t-if="picking.picking_type_code == 'incoming'" class="col-6 loc" style="background-color: lightgray;"><t t-esc="dest and dest.display_name or picking.location_dest_id[1]"/></td>
+                              <td t-else="" class="col-6"><t t-esc="picking.location_dest_id[1]"/></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Operation Type</th>
+                              <td><t t-esc="picking.picking_type_id[1]"/></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Scheduled Date</th>
+                              <td><t t-esc="picking.scheduled_date"/></td>
+                            </tr>
+                            <tr t-if="picking.picking_type_code != 'outgoing'">
+                              <th scope="row">Responsable</th>
+                              <td class="col-6 partner" style="background-color: lightgray;"><t t-esc="respon and respon.name"/></td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                    <div class="product_list mt-4">
+                        <div t-attf-class='row mb-1'> 
+                            <h3 class='col-2'>Qty</h3>
+                            <h3 class='col-2'>Done</h3>
+                            <h3 class='col-8'>Product</h3>
+                        </div>
+                        <t t-foreach="Object.keys(lines)" t-as="k">
+                            <div t-attf-class='row mb-1 line_{{k}}'> 
+                                <input type='number' t-att-value='lines[k].product_uom_qty' class='col-2 qty form-control' readonly="1"/>
+                                <input type='number' t-att-value='lines[k].quantity_done' class='col-2 qty_done form-control' min='0'/>
+                                <input type='text' t-att-value='lines[k].name' class='col-8 prod form-control' readonly="1"/>
+                            </div>
+                        </t>
+                    </div>
+                    <div class="row btn-group buttons mt-4">
+                        <button class="btn btn-danger m-1 back">
+                            <h3 class="m-1">Back</h3>
+                        </button>
+                        <button class="btn btn-success m-1 validate">
+                            <h3 class="m-1">Validate Picking</h3>
+                        </button>
+                    </div>     
+                    <div class="modal" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Warning</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">X</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary modal_close" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary force_validate" data-dismiss="modal">Confirm</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>                      
+                </div>
+                <div class="btn-group-vertical d-lg-none d-xl-none" role="group" style="width: 100%;height: 40%;">
+                    <div class="btn-group full-h">
+                        <div class="btn-secondary" disable="" type="text" style="align-content: center;display: grid;">
+                          <h3 id="code" style="text-align: center;vertical-align: middle;text-underline-position: ;"></h3>
+                        </div>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 1" >1</button>
+                        <button class="btn btn-secondary 2" >2</button>
+                        <button class="btn btn-secondary 3" >3</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 4" >4</button>
+                        <button class="btn btn-secondary 5" >5</button>
+                        <button class="btn btn-secondary 6" >6</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 7" >7</button>
+                        <button class="btn btn-secondary 8" >8</button>
+                        <button class="btn btn-secondary 9" >9</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary dot" >.</button>
+                        <button class="btn btn-secondary 0" >0</button>
+                        <button class="btn btn-secondary del" >&lt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+    <t t-name="PurchasesXML">
+        <style>
+            .o_main{
+                padding-left: 0px !important;
+            }
+        </style>
+       <div class="o_home_menu_background">
+            <div class="o_material_borrow_container">
+                <div class="o_borrow" style="overflow: auto;">
+                    <h2 class="mb-3">Purchase</h2>
+                    <div class="form-row" style="border-bottom: 1px black solid;">
+                        <div class="form-group col-md-6">
+                            <label for="supplier">Supplier:</label>
+                            <input class="form-control" t-attf-value="{{supplier and supplier.name}}" id="supplier" readonly="1"/>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="destPlace">Destination place:</label>
+                            <input class="form-control" t-attf-value="{{dest and dest.name}}" id="destPlace" readonly="1"/>
+                        </div>
+                    </div>      
+                    <table class="table table-sm" style="border-bottom: 1px black solid;">
+                      <tbody>
+                        <tr>
+                          <th scope="row">Responsable</th>
+                          <td class="col-6 partner" style="background-color: lightgray;"><input class="form-control" t-attf-value="{{respon and respon.name}}" readonly="1"/></td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Supplier.Ref</th>
+                          <td class="col-6" style="background-color: lightgray;"><input class="form-control" t-attf-value="{{refsup}}" id="refsup"/></td>
+                        </tr>
+                        <tr>
+                            <th class="align-middle" scope="row">Planned date</th>
+                            <td class="col-6" style="background-color: lightgray;">
+                                <input type="date" class="form-control" id="rec_date" t-attf-value="{{rec_date}}"/>
+                                <input type="time" class="form-control" id="rec_time" t-attf-value="{{rec_time}}"/>
+                            </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="product_list mt-4">
+                        <div t-if="Object.keys(products).length &gt; 0" t-attf-class='row mb-1'> 
+                                <h3 class='col-2'>Qty</h3>
+                                <h3 class='col-2'>Price</h3>
+                                <h3 class='col-8'>Product</h3>
+                            </div>
+                        <t t-foreach="Object.keys(products)" t-as="key">
+                            <div t-attf-class='row mb-1 prod_{{key}}'> 
+                                <input type='number' t-att-value='products[key][1]' class='col-2 qty form-control' min='1'/>
+                                <input type='number' t-att-value='products[key][2]' class='col-2 price form-control' min='0'/>
+                                <input type='text' t-att-value='products[key][0]' class='col-7 prod form-control' readonly="1"/>
+                                <button class='trash col-1 btn btn-danger'>
+                                    <i class='fa fa-trash'/>
+                                </button>
+                            </div>
+                        </t>
+                    </div>
+                    <div class="mt-2">
+                        <div class="Add row">
+                            <a id="add" href="#" class="col-12">Add Product...</a>
+                        </div>
+                    </div>    
+                    <t t-if="valid">
+                        <div class='row mt-5 form-check'>
+                            <input class='form-check-input validate' type='checkbox' onclick="document.getElementById('v_pick').setAttribute('value',document.getElementById('v_pick').value*-1)" value='1' id='v_pick' checked="1"/>
+                            <label class="m-1" for="v_pick"><h3>Validate Picking</h3></label>
+                        </div>
+                    </t>
+                    <t t-else="">
+                        <div class='row mt-5 form-check'>
+                            <input class='form-check-input validate' type='checkbox' onclick="document.getElementById('v_pick').setAttribute('value',document.getElementById('v_pick').value*-1)" value='1' id='v_pick' />
+                            <label class="m-1" for="v_pick"><h3>Validate Picking</h3></label>
+                        </div>
+                    </t>
+                    <div class="row btn-group buttons mt-4">
+                            <button class="btn btn-danger m-1 exit">
+                                <h3 class="m-1">Exit</h3>
+                            </button>
+                            <button class="btn btn-primary m-1 start">
+                                <h3 class="m-1">Finish</h3>
+                            </button>
+                    </div>     
+                    <div class="modal" tabindex="-1" role="dialog">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">Warning</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">X</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary modal_close" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>                      
+                </div>
+                <div class="btn-group-vertical d-lg-none d-xl-none" role="group" style="width: 100%;height: 40%;">
+                    <div class="btn-group full-h">
+                        <div class="btn-secondary" disable="" type="text" style="align-content: center;display: grid;">
+                          <h3 id="code" style="text-align: center;vertical-align: middle;text-underline-position: ;"></h3>
+                        </div>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 1" >1</button>
+                        <button class="btn btn-secondary 2" >2</button>
+                        <button class="btn btn-secondary 3" >3</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 4" >4</button>
+                        <button class="btn btn-secondary 5" >5</button>
+                        <button class="btn btn-secondary 6" >6</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary 7" >7</button>
+                        <button class="btn btn-secondary 8" >8</button>
+                        <button class="btn btn-secondary 9" >9</button>
+                    </div>
+                    <div class="btn-group full-h">
+                        <button class="btn btn-secondary dot" >.</button>
+                        <button class="btn btn-secondary 0" >0</button>
+                        <button class="btn btn-secondary del" >&lt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="EndScreenXML">
+        <style>
+            .o_main{
+                padding-left: 0px !important;
+            }
+        </style>
+        <div class="o_hr_attendance_kiosk_mode_container o_home_menu_background" style="flex-flow: row;">
+            <div class="o_material_borrow_container">
+                <div class="o_borrow">
+
+                    <h1 class="mb0">Purchase Correctly Created!</h1>
+
+                    <button class="button_dismiss btn btn-primary btn-lg">
+                        <span class="text-capitalize">OK</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="QuickInfoXML">
+        <style>
+            .o_main{
+                padding-left: 0px !important;
+            }
+        </style>
+        <div class="o_hr_attendance_kiosk_mode_container o_home_menu_background" style="flex-flow: row;">
+            <div class="o_material_borrow_container ">
+                <div class="o_borrow" style="overflow: auto;">
+                    <t t-if="!mode">
+                        <div class="">
+                            <h1 class="">Quick Info</h1>
+                            <img class="img img-fluid d-block mx-auto col-10" src="/hr_attendance/static/src/img/barcode.png"/>
+                            <h4 class="mt4 mb0">Scan Product or Location</h4>
+                        </div>
+                           
+                    </t>
+                    <t t-else="">
+                        <h1 class=""><t t-if="mode == 'p'">Product </t><t t-else="">Location </t><t t-esc="name"/></h1>
+                        <t t-if="quants.length &gt; 0">
+                            <div  t-attf-class='row mb-1'> 
+                                <h3 class='col-8'><t t-if="mode == 'l'">Product </t><t t-else="">Location </t></h3>
+                                <h3 class='col-2'>Reserved</h3>
+                                <h3 class='col-2'>On Hand</h3>
+                            </div>
+                        </t>
+                        <t t-else="">
+                            <h2 class='col-12'>Empty</h2>
+                        </t>
+                        <t t-foreach="quants" t-as="quant">
+                            <div class="row"> 
+                                <t t-if="mode == 'l'">
+                                    <input type='text' t-att-value='quant.product_id[1]' class='col-8 prod form-control' readonly="1"/>
+                                </t>
+                                <t t-else="">
+                                    <input type='text' t-att-value='quant.location_id[1]' class='col-8 prod form-control' readonly="1"/>
+                                </t>
+                                <input type='number' t-att-value='quant.reserved_quantity' class='col-2 qty form-control' readonly="1"/>
+                                <input type='number' t-att-value='quant.quantity' class='col-2 price form-control' readonly="1"/>
+                            </div>
+                        </t>
+                    </t>
+                    <div class="row btn-group buttons mt-4">
+                        <button class="btn btn-primary m-1 prod">
+                            <h3 class="m-1">Product</h3>
+                        </button>
+
+                        <button class="btn btn-primary m-1 locat">
+                            <h3 class="m-1">Location</h3>
+                        </button>
+                    </div>
+                    <br/>
+                    <div class="row btn-group buttons mt-4">
+                        <button class="btn btn-danger m-1 exit">
+                            <h3 class="m-1">Exit</h3>
+                        </button>
+                    </div>  
+                </div>     
+            </div> 
+            <div class="modal" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Warning</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">X</span>
+                    </button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modal_close" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div> 
+    </t>
+
+    <t t-name="InvUpdXML">
+            <style>
+            .o_main{
+                padding-left: 0px !important;
+            }
+        </style>
+        <div class="o_hr_attendance_kiosk_mode_container o_home_menu_background" style="flex-flow: row;">
+            <div class="o_material_borrow_container ">
+                <div class="o_borrow" style="overflow: auto;">
+                    <h2 class="mb-3">Inventory</h2>
+                    <table class="table table-sm" style="border-bottom: 1px black solid;">
+                      <tbody>
+                        <tr>
+                          <th scope="row">Current location</th>
+                          <td class="col-6 loc" style="background-color: lightgray;"><t t-esc="location.display_name"/></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <t t-foreach="Object.keys(lines)" t-as="location_k">
+                        <fieldset class="col-12" style="border: 1px black solid;">
+                            <legend style="font-weight:bold;"><t t-esc="lines[location_k].name"/></legend>
+                            <t t-foreach="Object.keys(lines[location_k])" t-as="product_k">
+                                <div t-if="product_k != 'name'" t-attf-class='row mb-1 prod_{{location_k}}_{{product_k}}'> 
+                                    <input type='text' t-att-value='lines[location_k][product_k].name' class='col-8 prod form-control' readonly="1"/>
+                                    <input type='number' t-att-value='lines[location_k][product_k].qty' class='col-3 qty form-control' min='1'/>
+                                    <button class='trash col-1 btn btn-danger'>
+                                        <i class='fa fa-trash'/>
+                                    </button>
+                                </div>
+                            </t>
+                        </fieldset>
+                    </t>
+                    <div class="mt-2">
+                        <div class="Add row">
+                            <a id="add" href="#" class="col-12">Add Product...</a>
+                        </div>
+                    </div> 
+                    <div class="row btn-group buttons mt-4">
+                        <button class="btn btn-danger m-1 exit">
+                            <h3 class="m-1">Exit</h3>
+                        </button>
+                        <button class="btn btn-primary m-1 confirm">
+                            <h3 class="m-1">Confirm</h3>
+                        </button>
+                    </div>  
+                </div>     
+            </div> 
+            <div class="modal" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Warning</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">X</span>
+                    </button>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary modal_close" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div> 
+    </t>    
+</template>
